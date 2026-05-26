@@ -29,14 +29,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #GETTING INPUT
-x = np.array(eval(input()))#EXAMPLE INPUT - 2,9,5,5,3,7,1,8,6,2
-y = np.array(eval(input()))#EXAMPLE INPUT - 69,98,82,77,71,84,55,94,84,64
+x = np.array(eval(input()))
+y = np.array(eval(input()))
 
-#FINDING MEAN 
 x_mean = np.mean(x)
 y_mean = np.mean(y)
 
-#CALCULATING NUMERATOR AND DENOMINATOR
 num = 0
 denom = 0
 for i in range(len(x)):
@@ -47,11 +45,9 @@ m = num / denom
 b = y_mean - m * x_mean
 print(m, b)
 
-#FINDING Y-PREDICTED
 y_predicted = m * x + b
 print(y_predicted)
 
-#PLOTTING GRAPH
 plt.scatter(x, y)
 plt.plot(x, y_predicted, color='red')
 plt.show()
